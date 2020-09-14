@@ -43,7 +43,7 @@ const Fullbody = () => {
 
 	<div className="py-24 px-12 md:px-32">
 		<div className="container mx-auto">
-			<h1 className="text-2xl md:text-6xl font-black uppercase text-black tracking-widest leading-normal mb-12 pl-10">SINGULAR ARTISTS</h1>
+			<h1 className="text-2xl md:text-6xl font-black uppercase text-black tracking-widest leading-normal mb-12 pl-10">We Build The Web</h1>
 			<div className="font-serif leading-loose tracking-wide text-base md:text-lg text-black opacity-50 max-w-xl md:ml-64">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel venenatis velit. Donec placerat, quam eu fermentum vestibulum, justo felis accumsan metus, eget mollis est nibh in sapien. </p>
 			</div>
@@ -95,7 +95,7 @@ const Fullbody = () => {
 		<div className="relative mt-24 -mb-24 bg-black px-12 py-24 flex items-center">
 			<div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style={{ height: "80px", transform: "translateZ(0)"}}>
                 <svg className="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-                    <polygon class="text-black fill-current" points="2560 0 2560 100 0 100"></polygon>
+                    <polygon className="text-black fill-current" points="2560 0 2560 100 0 100"></polygon>
                 </svg>
             </div>
             <div className="hidden md:block w-3/12"></div>
@@ -189,27 +189,7 @@ const Fullbody = () => {
 		<div className="hidden md:block w-3/12"></div>
 		<div className="relative flex flex-col min-w-0 break-words md:w-1/2 mb-6 shadow-lg bg-gray-300">
 			<div className="flex-auto p-5 lg:p-10">
-				<form>
-					<h4 className="text-2xl font-semibold">Want to get in touch with us?</h4>
-					<p className="leading-relaxed mt-1 mb-4 text-gray-600">Complete this form and we will get back to you in 24 hours.</p>
-					<div className="relative w-full mb-3 mt-8">
-						<label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="full-name">Full Name</label>
-						<input name="fullname" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white  text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Full Name" style={{ transition: "all 0.15s ease 0s;"}} />
-					</div>
-					<div className="relative w-full mb-3">
-						<label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="email">Email</label>
-						<input type="email" name="email" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white  text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Enter Your Email Address" style={{ transition: "all 0.15s ease 0s;"}} />
-					</div>
-					
-					<div className="relative w-full mb-3">
-						<label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="message">Message</label>
-						<textarea rows="4" cols="80" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white  text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Type a message..." name="message"></textarea>
-					</div>
-					
-					<div className="text-center mt-6">
-						<input className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" />
-					</div>
-				</form>
+				<Form />
 			</div>
 		</div> 
 	</div>

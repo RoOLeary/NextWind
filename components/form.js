@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 export const Form = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
+        e.preventDefault(); 
         setName(data.fullname);
         console.log(data);
         e.target.reset(); 
@@ -30,7 +31,7 @@ export const Form = () => {
             <input 
                 name="fullname" 
                 ref={register} 
-                className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white text-sm shadow focus:outline-none focus:shadow-outline w-full"
                 placeholder="Full Name"
                 style={{ transition: "all .15s ease" }}/>
             </div>
@@ -49,7 +50,7 @@ export const Form = () => {
                     required: true
                     //validate: (input) => isEmail(input),
                 })}
-                className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white text-sm shadow focus:outline-none focus:shadow-outline w-full"
                 placeholder="Enter Your Email Address"
                 style={{ transition: "all .15s ease" }}
             />
@@ -65,14 +66,14 @@ export const Form = () => {
             <textarea
                 rows="4"
                 cols="80"
-                className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white text-sm shadow focus:outline-none focus:shadow-outline w-full"
                 placeholder="Type a message..."
                 name="message" 
                 ref={register} 
             />
             </div>
             <div className="text-center mt-6">
-                <input className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" />
+                <input className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" />
             </div>
         </form>
     
