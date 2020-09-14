@@ -12,14 +12,25 @@ export default function IndexPage() {
       </div>
 
 
-      <div className="p-3 md:grid grid-cols-3 gap-2 md:p-8">
+      <div className="p-3 md:grid grid-cols-3 gap-2 md:px-2 py-1">
         <div className="px-4 py-4 col-span-2 row-span-2 bg-black text-white">Lucy</div>
         <div className="px-4 py-8 bg-black text-white">In the Sky</div>
         <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
 
       </div>
 
-      <div className="p-3 grid sm:grid-cols-2 md:grid-cols-4 gap-2 md:p-8">
+      <div className="p-3 grid sm:grid-cols-2 md:grid-cols-4 gap-2 md:px-2 py-1">
+        <div className="px-4 py-4 col-span-4 row-span-2 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 bg-black text-white">In the Sky</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-4 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 bg-black text-white">In the Sky</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+      </div>
+
+      <div className="p-3 grid sm:grid-cols-2 md:grid-cols-4 gap-2 md:px-2 py-1">
         <div className="px-4 py-4 bg-black text-white">Lucy</div>
         <div className="px-4 py-8 bg-black text-white">In the Sky</div>
         <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
@@ -29,6 +40,45 @@ export default function IndexPage() {
         <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
         <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
       </div>
+
+      <div className="p-3 grid sm:grid-cols-2 md:grid-cols-8 gap-2 md:px-2 py-1">
+        <div className="px-4 py-4 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 bg-black text-white">In the Sky</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-4 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 bg-black text-white">In the Sky</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+      </div>
+
+      <div className="p-3 grid sm:grid-cols-6 md:grid-cols-12 gap-2 md:px-2 py-1">
+        <div className="px-4 py-4 col-span-4 row-span-4 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 col-span-6 row-span-4 bg-black text-white">In the Sky</div>
+        {/* <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-4 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 bg-black text-white">In the Sky</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-4 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 bg-black text-white">In the Sky</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-4 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 bg-black text-white">In the Sky</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-4 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 bg-black text-white">In the Sky</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-4 bg-black text-white">Lucy</div>
+        <div className="px-4 py-8 bg-black text-white">In the Sky</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div>
+        <div className="px-4 py-8 bg-black text-white">With Diamonds</div> */}
+      </div>
+      
       <Footer />
     </div>
   )
