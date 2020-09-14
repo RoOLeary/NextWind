@@ -32,7 +32,7 @@ const Fullbody = () => {
         </div>
 	
 	<div className="relative z-10 w-full h-24 px-12 bg-white flex justify-between">
-		<a href="#" className="block h-full w-12 flex items-center text-lg md:text-2xl font-bold tracking-widest text-black uppercase hover:text-black">RO|NXTWIND</a>
+		<a href="#" className="block h-full w-12 flex items-center text-lg md:text-2xl font-bold tracking-widest text-black uppercase hover:text-black">RO|NXT|WND</a>
 		<a onClick={() => toggleMenu()} className="relative block px-4 bg-black text-white text-center tracking-widest uppercase text-xs font-bold py-8 flex flex-col items-center justify-between hover:bg-gray-900">
 			<span>{element}</span>
 		</a>
@@ -93,11 +93,15 @@ const Fullbody = () => {
 			</div>
 		</div>
 		<div className="relative mt-24 -mb-24 bg-black px-12 py-24 flex items-center">
-			<div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style={{ height: "80px", transform: "translateZ(0)"}}><svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0"><polygon class="text-black fill-current" points="2560 0 2560 100 0 100"></polygon></svg></div>
+			<div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style={{ height: "80px", transform: "translateZ(0)"}}>
+                <svg className="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                    <polygon class="text-black fill-current" points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
             <div className="hidden md:block w-3/12"></div>
 			<div className="flex-1 relative">
 				<div className="font-serif text-white opacity-75 text-base md:text-xl max-w-2xl leading-loose">
-					<h2 className="text-white uppercase font-bold tracking-widest text-3xl pb-4">About Me</h2>
+					<h2 className="text-white uppercase font-bold tracking-widest text-3xl pb-4">About Us</h2>
 					<p>Branding is the foundation of your business. A fantastic digital experience relies on the brand resonating perfectly with your target audience. We help businesses assert their position in their industry by providing a brand identity that's solid and memorable.</p>
 				</div>
 				<span className="absolute top-0 left-0 w-4 h-full bg-white opacity-50 -ml-20"></span>
@@ -106,7 +110,7 @@ const Fullbody = () => {
 	</div>
 	<div className="w-full bg-white flex flex-wrap">	
 		<div className="px-12 md:-px-0 w-full md:w-4/12 bg-white flex items-center justify-start md:justify-end">
-			<div className="shadow-xl md:shadow-none px-12 py-12 md:pl-36 md:pr-24 bg-white md:-mr-64 relative z-10">
+			<div className="shadow-xl md:shadow-none sm:px-4 px-12 py-12 md:pl-36 md:pr-24 bg-white md:-mr-64 relative z-10">
 				<h1 className="mb-8 text-3xl md:text-5xl text-black text-bold uppercase font-bold tracking-widest leading-tight">
 					LATEST TOUR ANNOUNCEMENTS
 				</h1>
@@ -183,27 +187,27 @@ const Fullbody = () => {
 
 	<div className="relative bg-black px-12 py-24 flex items-center">
 		<div className="hidden md:block w-3/12"></div>
-		<div className="relative flex flex-col min-w-0 break-words md:w-1/2 mb-6 shadow-lg rounded-lg bg-gray-300">
+		<div className="relative flex flex-col min-w-0 break-words md:w-1/2 mb-6 shadow-lg bg-gray-300">
 			<div className="flex-auto p-5 lg:p-10">
 				<form>
 					<h4 className="text-2xl font-semibold">Want to get in touch with us?</h4>
 					<p className="leading-relaxed mt-1 mb-4 text-gray-600">Complete this form and we will get back to you in 24 hours.</p>
 					<div className="relative w-full mb-3 mt-8">
 						<label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="full-name">Full Name</label>
-						<input name="fullname" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Full Name" style={{ transition: "all 0.15s ease 0s;"}} />
+						<input name="fullname" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white  text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Full Name" style={{ transition: "all 0.15s ease 0s;"}} />
 					</div>
 					<div className="relative w-full mb-3">
 						<label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="email">Email</label>
-						<input type="email" name="email" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Enter Your Email Address" style={{ transition: "all 0.15s ease 0s;"}} />
+						<input type="email" name="email" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white  text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Enter Your Email Address" style={{ transition: "all 0.15s ease 0s;"}} />
 					</div>
 					
 					<div className="relative w-full mb-3">
 						<label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="message">Message</label>
-						<textarea rows="4" cols="80" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Type a message..." name="message"></textarea>
+						<textarea rows="4" cols="80" className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white  text-sm shadow focus:outline-none focus:shadow-outline w-full" placeholder="Type a message..." name="message"></textarea>
 					</div>
 					
 					<div className="text-center mt-6">
-						<input className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" />
+						<input className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" />
 					</div>
 				</form>
 			</div>
