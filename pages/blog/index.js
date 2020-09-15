@@ -7,8 +7,8 @@ function Blog({ posts }){
     <>
     <Nav />
     <ul>
-      {posts.map((post) => (
-        <li>{post.Title} - {post.Description}</li>
+      {posts.map((post, i) => (
+        <li key={i}>{post.Title} - {post.Description}</li>
       ))}
     </ul>
     </>
