@@ -10,9 +10,15 @@ const element = <FontAwesomeIcon icon={faCog} size="3x" />
 const Nav = () => {
 
    const [ isOpen, setIsOpen ] = useState(false);
+   const [ isHover, setIsHover ] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen)
+    }
+
+    const triggerHover = (e) => {
+      e.currentTarget.classList.toggle('fa-spin');
+      setIsHover(!isHover)
     }
 
   return (
@@ -30,9 +36,9 @@ const Nav = () => {
         </div>
 	
     <div className="relative z-10 w-full h-24 px-12 bg-white flex justify-between">
-      <a href="#" className="block h-full w-12 flex items-center text-lg md:text-2xl font-bold tracking-widest text-black uppercase hover:text-black">RO|NXT|WND</a>
+      <a href="/" className="block h-full w-12 flex items-center text-lg md:text-2xl font-bold tracking-widest text-black uppercase hover:text-black">RO|NXT|WND</a>
       <a onClick={() => toggleMenu()} className="relative block px-4 bg-black text-white text-center tracking-widest uppercase text-xs font-bold py-8 flex flex-col items-center justify-between hover:bg-gray-900">
-        <span>{element}</span>
+        <span onMouseEnter={(e) => triggerHover(e)} onMouseLeave={(e) => triggerHover(e)}>{element}</span>
       </a>
 	</div>
   </>

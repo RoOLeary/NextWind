@@ -8,7 +8,7 @@ function Blog({ posts }){
     <Nav />
     <ul>
       {posts.map((post) => (
-        <li>{post.title}</li>
+        <li>{post.Title} - {post.Description}</li>
       ))}
     </ul>
     </>
@@ -21,7 +21,7 @@ function Blog({ posts }){
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const res = await fetch('http://localhost:1337/articles')
+  const res = await fetch('http://localhost:1337/products')
   const posts = await res.json()
   console.log(posts);
   // By returning { props: posts }, the Blog component
