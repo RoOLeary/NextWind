@@ -7,6 +7,7 @@ import Link from 'next/link'
 
 function Blog({ posts }){
 	
+	
   return (
     <>
     <Nav />
