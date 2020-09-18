@@ -15,8 +15,8 @@ const Fullbody = () => {
 
 	<div className="py-24 px-12 md:px-32">
 		<div className="container mx-auto">
-			<h1 className="text-2xl md:text-6xl font-black uppercase text-black tracking-widest leading-normal mb-12 pl-10">We Build Digital</h1>
-			<div className="font-serif leading-loose tracking-wide text-base md:text-lg text-black opacity-50 max-w-xl md:ml-64">
+			<h1 className="text-2xl md:text-6xl font-black uppercase text-black tracking-widest leading-normal mb-12 pl-10">We Are Schmlort</h1>
+			<div className="font-serif leading-loose tracking-wide text-base md:text-lg text-black opacity-50 max-w-lg md:ml-64">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel venenatis velit. Donec placerat, quam eu fermentum vestibulum, justo felis accumsan metus, eget mollis est nibh in sapien. </p>
 			</div>
 		</div>
@@ -37,7 +37,7 @@ const Fullbody = () => {
 				
 				<div className="md:mb-2 md:mb-0 w-full md:w-2/3 h-64 md:h-96 bg-black overflow-hidden relative">
 					<img src="https://images.unsplash.com/photo-1545060894-7b45236d00b3?w=1200" alt="Citybrand Website Design by Digizu" className="w-full h-auto opacity-50" />
-					<h2 className="text-white uppercase font-bold tracking-widest text-3xl absolute bottom-0 left-0 pl-10 pb-10">City Brand</h2>
+					<h2 className="text-white uppercase font-bold tracking-widest text-3xl absolute bottom-0 left-0 pl-10 pb-10">Scmhlort? BLORT!</h2>
 				</div>
 				<div className="flex-1 h-64 md:h-96 flex flex-wrap md:pl-1">
 					<div className="w-1/2 h-1/2 md:px-1 md:pb-1">
@@ -86,7 +86,7 @@ const Fullbody = () => {
 				<h1 className="mb-8 text-3xl md:text-5xl text-black text-bold uppercase font-bold tracking-widest leading-tight">
 					LATEST TOUR ANNOUNCEMENTS
 				</h1>
-				<h2 className="text-lg md:text-2xl font-serif text-gray-500">Exceptional Contemporary Living</h2>
+				<h2 className="text-lg md:text-2xl font-serif text-gray-500">Excellent Italian Greyhound</h2>
 			</div>
 		</div>
 		<div className="-mt-64 md:mt-0 w-full md:flex-1">
