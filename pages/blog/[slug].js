@@ -15,10 +15,12 @@ const Post = (props) => {
                         <h1 className="text-2xl md:text-5xl font-black uppercase text-gray-800 tracking-widest leading-tight mb-12 hover:opacity-50">
                            {props.post[0].title}
                         </h1>
+                        <small>By {props.post[0].created_by.firstname}</small>
+						
+                        <div className="max-w-m font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
+                        {props.post[0].body}
                     </div>
-                    <div className="font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
-                        <p>{props.post[0].body}</p>
-                    </div>
+                </div>
                 </article>
             </div>
             <Footer />
