@@ -4,7 +4,7 @@ import Footer from '../../components/footer'
 
 const Post = (props) => {
 
-    console.log(props.post[0].title);
+    //  console.log(props.post[0].title);
 
     return(
         <>

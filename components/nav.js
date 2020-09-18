@@ -30,7 +30,7 @@ const Nav = () => {
                 <li><Link href="/"><a className="block hover:opacity-50">Home</a></Link></li>
                 <li><a href="/" className="block hover:opacity-50">Web Design</a></li>
                 <li><a href="/" className="block hover:opacity-50">Web Development</a></li>
-                <li><a href="/" className="block hover:opacity-50">Contact</a></li>
+                <li><Link href="/contact"><a className="block hover:opacity-50">Contact</a></Link></li>
                 <li><Link href="/blog"><a className="block hover:opacity-50">Blog</a></Link></li>
             </ul>
         </div>
