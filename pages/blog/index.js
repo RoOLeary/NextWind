@@ -15,18 +15,18 @@ function Blog({ posts }){
 		<article className="relative z-10 w-full flex flex-wrap mb-24">
 			<div className="w-full bg-white p-12 md:p-24 bg-white">
 			<h1 className="text-2xl md:text-5xl font-black uppercase text-gray-800 tracking-widest leading-tight mb-12 hover:opacity-50">
-				BLERRRG
+				BLERRRG PEEERRRSHHHTS
 			</h1>
 			<div className="max-w-xl font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
 				<ul>
 				{posts.map((post, i) => (
 					<li className="pb-4" key={i}>
-						<Link href={`/blog/${post.Title.toLowerCase()}`}>
+						<Link href={`/blog/${post.slug}`}>
 							<a>
-								<h3 className="text-bold pb-2 text-2xl"><strong>{post.Title}</strong></h3>
+								<h3 className="text-bold pb-2 text-2xl"><strong>{post.title}</strong></h3>
 							</a>
 						</Link>
-						<p>{post.Description}</p>
+						<p>{post.excerpt}</p>
 					</li>
 				))}
 				</ul>
@@ -53,7 +53,7 @@ function Blog({ posts }){
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const res = await fetch('http://localhost:1337/products')
+  const res = await fetch('http://localhost:1337/articles')
   const posts = await res.json()
   // By returning { props: posts }, the Blog component
   // will receive `posts` as a prop at build time

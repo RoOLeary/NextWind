@@ -15,7 +15,7 @@ const Fullbody = () => {
 
 	<div className="py-24 px-12 md:px-32">
 		<div className="container mx-auto">
-			<h1 className="text-2xl md:text-6xl font-black uppercase text-black tracking-widest leading-normal mb-12 pl-10">We Are Schmlort</h1>
+			<h1 className="text-2xl md:text-6xl font-black uppercase text-black tracking-widest leading-normal mb-12 pl-10">MER BERRLS</h1>
 			<div className="font-serif leading-loose tracking-wide text-base md:text-lg text-black opacity-50 max-w-lg md:ml-64">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel venenatis velit. Donec placerat, quam eu fermentum vestibulum, justo felis accumsan metus, eget mollis est nibh in sapien. </p>
 			</div>
