@@ -12,12 +12,12 @@ const Post = (props) => {
             <div className="container mx-auto md:px-12">
                 <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-24 bg-white">
-                        <h1 className="text-2xl md:text-5xl font-black uppercase text-gray-800 tracking-widest leading-tight mb-12 hover:opacity-50">
+                        <h1 className="text-2xl md:text-5xl font-black uppercase text-gray-800 tracking-widest leading-tight mb-4 hover:opacity-50">
                            {props.post[0].title}
                         </h1>
-                        <small>By {props.post[0].created_by.firstname}</small>
-						
-                        <div className="max-w-m font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
+                        <small><strong>By {props.post[0].created_by.firstname}, {new Date(props.post[0].created_at).toLocaleString()}</strong></small>
+                        <img src="//placedog.net/1200/350" className="mx-auto mt-4" />
+						<div className="max-w-m font-serif leading-loose tracking-wide text-lg text-black mt-6 mb-12 format-content">
                         {props.post[0].body}
                     </div>
                 </div>
