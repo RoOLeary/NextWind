@@ -17,6 +17,7 @@ export default function Footer() {
             x="0"
             y="0"
           >
+          
             <polygon
               className="text-gray-300 fill-current"
               points="2560 0 2560 100 0 100"
@@ -27,13 +28,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-600 font-semibold py-1">
-                Copyright © {new Date().getFullYear()}{" "}NextWind by{" "}
-                <a
-                  href="https://ronan-oleary.com"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  Ro
-                </a>.
+                Copyright © {new Date().getFullYear()}{" "}RO|NXT|WND
               </div>
             </div>
           </div>
