@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import { ModalContext } from './../contexts/modalContext';
 
 const Modal = ( props ) => {
-
+    
     const ctx = useContext(ModalContext);
     console.log(ctx);
     let {item} = props;
-    let show = ctx[0].isModalOpen
+    let show = ctx[0].state.isModalOpen;
+
     let protoModal = {
         background: "white",
         padding: "10px",
@@ -16,24 +17,30 @@ const Modal = ( props ) => {
         alignItems: "center",
         flexDirection: "column",
         margin: "0 auto",
-        width: "60%"
+        width: "60%",
+        opacity: 1,
     };
 
     let modalBackground = {
-        width: "100%",
-        height: "100%",
-        background: "black",
-        display: show ? "block" : "none",
-        position: "absolute",
-        zIndex: "9999",
-        justifyContent: "center",
-        alignItems: "center",
+        //background: "black",
+        display: show ? "flex" : "none",
+        // position: "absolute",
+        // zIndex: "9999",
+        // justifyContent: "center",
+        // alignItems: "center",
     }
+
+    const closeModal = () => {
+        ctx[0].handlers.setIsModalOpen(!show);
+    }
+
+
     return(
-        <div style={modalBackground}>
+        <div className="bg-black bg-opacity-75 fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center" style={modalBackground}>
             <div className="protoModal" style={protoModal}>
-                <h2>{ctx[2].showModalContent.title ? ctx[2].showModalContent.title : 'STUFF JUST FOR NOW'}</h2>
-                <p>{ctx[2].showModalContent.description ? ctx[2].showModalContent.description : 'STUFF JUST FOR NOW'}</p>
+                  <h2>{ctx[0].state.showModalContent.title ? ctx[0].state.showModalContent.title : 'STUFF JUST FOR NOW'}</h2>
+                <p>{ctx[0].state.showModalContent.description ? ctx[0].state.showModalContent.description : 'STUFF JUST FOR NOW'}</p>
+                <a onClick={() => closeModal()}>Close</a>   
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ export const Form = () => {
     return(
         <form onSubmit={handleSubmit(onSubmit)}>
             <h4 className="text-2xl font-semibold">
-            Want to work with {name}?
+            Want to get in touch?
             </h4>
             <p className="leading-relaxed mt-1 mb-4 text-gray-600">
             Complete this form and we will get back to you in 24 hours.

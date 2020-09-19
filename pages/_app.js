@@ -5,13 +5,13 @@ import { ModalContextProvider } from './../contexts/modalContext';
 function NextWind({ Component, pageProps }) {
   return (
       <>
-      <Head>
-        <title>RO|NEXT|WND</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <ModalContextProvider>
-        <Component {...pageProps} />
-      </ModalContextProvider>
+        <Head>
+          <title>RO|NEXT|WND</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>
+        <ModalContextProvider>
+          <Component {...pageProps} />
+        </ModalContextProvider>
       </>
     )
 }

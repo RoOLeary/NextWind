@@ -6,7 +6,6 @@ import Footer from './../../components/form'
 function Contact(){
 
     return (
-       
         <>
             <Nav />
             <div className="container mx-auto md:px-12">
