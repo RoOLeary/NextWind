@@ -45,7 +45,6 @@ const Fullbody = () => {
 					</div>
 					<div className="w-1/2 h-1/2 md:px-1 md:pb-1">
 						<img src="https://images.unsplash.com/photo-1545060894-7b45236d00b3?w=1200" alt="" className="w-full h-full object-cover filter-grayscale" />
-						<h2 className="text-black">City Brand</h2>
 					</div>
 				</div>
 			</div>
