@@ -6,6 +6,7 @@ const ProgressScroller = (props) => {
     const [ scrollTotal, setScrollTotal ] = useState(0); 
 
     const progressBar = () => {
+        
         const scrollPx = document.documentElement.scrollTop; 
         const winHeightPx = 
             document.documentElement.scrollHeight -
@@ -15,7 +16,9 @@ const ProgressScroller = (props) => {
     };
 
     useEffect(() => {
+        let unmounted = false;
         window.addEventListener("scroll", progressBar);
+        return () => { unmounted = true };
     },[]);
 
     const progressMainWrapper = {
