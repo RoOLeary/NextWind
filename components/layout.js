@@ -1,13 +1,14 @@
 import React from 'react';
-
 import Head from 'next/head';
 import Nav from './nav';
 import Footer from './footer';
+import ProgressScroller from './progressScroller';
 
 const Layout = ({ props, children }) => {
     
     return(
         <div className="nextWind_layout">
+            <ProgressScroller brandcolor="#f00" />
             <Nav />
             {children}
             <Footer />
