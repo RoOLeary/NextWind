@@ -18,6 +18,7 @@ const WorkItem = (props) => {
                 <img className="mx-auto" src={`${item.image}`} alt={`${item.title}`} />
                 <div className="p-4">
                     <h3 className="text-xl font-heading font-semibold">{item.title}</h3>
+                    <p>{item.excpert}</p>
                 </div>
             </div>
         </div>

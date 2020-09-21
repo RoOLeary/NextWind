@@ -6,8 +6,10 @@ import Footer from '../components/footer'
 export default function IndexPage() {
   return (
     <div>
-      <Nav />
+      <Layout>
+        <p>CC</p>
       <Fullbody />
+      </Layout>
     </div>
   )
 }

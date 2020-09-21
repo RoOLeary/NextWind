@@ -1,13 +1,11 @@
 import React from 'react'; 
 import Form from './../../components/form'
-import Nav from './../../components/nav'
-import Footer from './../../components/form'
+import Layout from './../../components/layout'
 
 function Contact(){
 
     return (
-        <>
-            <Nav />
+        <Layout>
             <div className="container mx-auto md:px-12">
                 <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-24 bg-white">
@@ -35,11 +33,8 @@ function Contact(){
                     </div>
                 </div>
 	        </footer>
-        </>
-       
+        </Layout>  
     )
-
-
 }
 
 export default Contact; 

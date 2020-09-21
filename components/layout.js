@@ -1,12 +1,16 @@
 import React from 'react';
 
-const Layout = (props) => {
+import Head from 'next/head';
+import Nav from './nav';
+import Footer from './footer';
 
-    console.log(props);
+const Layout = ({ props, children }) => {
     
     return(
-        <div className="w-full h-full px-4 py-4 m-auto">
-            {props.chilren}
+        <div className="nextWind_layout">
+            <Nav />
+            {children}
+            <Footer />
         </div>
 
     )

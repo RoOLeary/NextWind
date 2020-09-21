@@ -1,15 +1,9 @@
 import React, { useState, useContext } from 'react'; 
-import Nav from './../../components/nav';
-import Footer from './../../components/footer';
+import Layout from './../../components/layout';
 import Modal from './../../components/modal';
 import WorkItem from './../../components/workItem';
 import { ModalContext } from './../../contexts/modalContext';
 import { ModalContextProvider } from './../../contexts/modalContext';
-
-
-
-
-
 
 const Work = () => {
 
@@ -18,31 +12,37 @@ const Work = () => {
     let workItems = [
         {
             "title": 'Project 1 Name',
+            "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
         },
         {
             "title": 'Project 2 Name',
+            "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an puss and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
         },
         {
             "title": 'Project 3 Name',
+            "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
         },
         {
             "title": 'Project 4 Name',
+            "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director and fluffer.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
         },
         {
             "title": 'Project 5 Name',
+            "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
         },
         {
             "title": 'Project 6 Name',
+            "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
         }
@@ -56,10 +56,8 @@ const Work = () => {
         });
 
     return(
-        <>
-            <Nav />
+        <Layout>
             <div className="container mx-auto md:px-12">
-                
                 <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-12 bg-white">
                         <h1 className="text-2xl md:text-5xl font-black uppercase text-gray-800 tracking-widest leading-tight mb-12 hover:opacity-50">
@@ -71,13 +69,11 @@ const Work = () => {
                         <div className="flex flex-wrap -mx-4 text-left">
                             {work ? work : 'Nothing here. '}
                         </div>
-                       
                     </div>
                 </article>
             </div>
             <Modal />
-            <Footer />
-        </>
+        </Layout>
     );
 }
 

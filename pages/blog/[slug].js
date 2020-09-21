@@ -1,14 +1,12 @@
 import React from 'react'; 
-import Nav from '../../components/nav'
-import Footer from '../../components/footer'
+import Layout from '../../components/layout'
 
 const Post = (props) => {
 
     //  console.log(props.post[0].title);
 
     return(
-        <>
-            <Nav />
+        <Layout>
             <div className="container mx-auto md:px-12">
                 <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-24 bg-white">
@@ -23,10 +21,9 @@ const Post = (props) => {
                 </div>
                 </article>
             </div>
-            <Footer />
-        </>
-    )
-}
+        </Layout>
+        )
+    }
 
 
 // This function gets called at build time
