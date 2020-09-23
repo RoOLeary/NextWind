@@ -28,7 +28,9 @@ const ProgressScroller = (props) => {
     setScrollTotal(scrolled);
   };
   useEffect(() => {
-    window.addEventListener('scroll', progressBar);
+    let unmounted = false;
+    window.addEventListener("scroll", progressBar);
+    return () => { unmounted = true };
   }, []);
   return (
     <ProgressMainWrapper>

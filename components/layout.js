@@ -4,11 +4,11 @@ import Nav from './nav';
 import Footer from './footer';
 import ProgressScroller from './progressScroller';
 
-const Layout = ({ props, children }) => {
+const Layout = ({ children }) => {
     
     return(
         <div className="nextWind_layout">
-            <ProgressScroller brandcolor="#f00" />
+            <ProgressScroller />
             <Nav />
             {children}
             <Footer />
