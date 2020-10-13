@@ -11,13 +11,13 @@ export default function IndexPage() {
 
   return (
       <Layout>
-          {!session ? <><p>
+          {/* {!session ? <><p>
           Not signed in </p>
           <button onClick={signIn}>Sign in</button></>
           :
           <><p>Signed in as {session.user.email} <br/>
           <button onClick={signOut}>Sign out</button>
-        </p></>}
+        </p></>} */}
           <Fullbody />
       </Layout>
     )
