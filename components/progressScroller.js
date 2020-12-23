@@ -13,7 +13,7 @@ const ProgressMainWrapper = styled.section`
 
 const ProgressMainStyle = styled.div`
     height: 5px;
-    background: ${({ brandColor }) => (brandColor ? brandColor : '#F42')};
+    background: ${({ brandColor }) => (brandColor ? brandColor : '#F00')};
     width: ${({ scroll }) => scroll};
 `;
 

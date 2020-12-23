@@ -36,7 +36,7 @@ const Nav = () => {
 	
     <div className="relative z-10 w-full h-24 px-12 bg-white flex justify-between">
       <Link href="/"><a className="block h-full flex items-center text-lg md:text-2xl font-bold tracking-widest text-black uppercase hover:text-black">RO O'LEARY</a></Link>
-      <a onClick={() => toggleMenu()} className="fixed right-0 block px-4 bg-black text-white text-center tracking-widest uppercase text-xs font-bold py-8 flex flex-col items-center justify-between hover:bg-gray-900 mr-20 -mt-2 z-50">
+      <a onClick={() => toggleMenu()} className="fixed right-0 block px-4 bg-black text-white text-center tracking-widest uppercase text-xs font-bold py-8 flex flex-col items-center justify-between hover:bg-gray-900 mr-10 -mt-2 z-100">
         <span onMouseEnter={(e) => triggerHover(e)} onMouseLeave={(e) => triggerHover(e)}>{element}</span>
       </a>
 	</div>

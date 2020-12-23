@@ -3,12 +3,32 @@ import Fullbody from '../../components/fullbody'
 import Form from '../../components/form'
 import Layout from '../../components/layout'
 import Link from 'next/link'
+import { useState } from 'react'
+
+let initialState = {
+	page: 1
+}
+
 
 function Blog({ posts }){
-	
+
+	const [page, setPage] = useState(initialState.page)
+	console.log(posts);
+	const psts = posts.map((post, i) => {
+		return(
+			<li className="pb-4" key={i}>
+				{post.title.rendered}
+			</li>
+		)
+	})
+
+
+	const someShite = () => {
+		setPage(page + 1)
+		console.log('Example:', 'https://api.exampple.com/endpoint?' + page);
+	}
 	
   return (
-    <>
     <Layout>
 				<div className="container mx-auto md:px-12">
 					<article className="relative z-10 w-full flex flex-wrap mb-24">
@@ -18,55 +38,39 @@ function Blog({ posts }){
 								</h1>
 								<div className="max-w-xl font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
 									<ul>
-									{posts.map((post, i) => (
-										<li className="pb-4" key={i}>
+									
+									{posts.map((post, i) => {
+										return(
+                                        <li className="pb-4" key={i}>
 											<Link href={`/blog/${post.slug}`}>
 												<a>
-													<h3 className="text-bold pb-2 text-2xl"><strong>{post.title}</strong></h3>
+													<h3 className="text-bold pb-2 text-2xl"><strong>{post.title.rendered}</strong></h3>
 												</a>
 											</Link>
-											<small>By {post.created_by.firstname} on {new Date(post.created_at).toLocaleString()}</small>
-											<p>{post.excerpt}</p>
+											<p dangerouslySetInnerHTML={{ __html:post.excerpt.rendered }} />
 										</li>
-									))}
+										)
+									})}
 									</ul>
 								</div>
+								<a className="btn" onClick={someShite} data-page={page}>LOAD MORE</a>
 							</div>
 					</article>
 			</div>
 		</Layout>
-    </>
   )
 }
 
-// This function gets called at build time on server-side.
-// It won't be called on client-side, so you can even do
-// direct database queries. See the "Technical details" section.
-export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-  const res = await fetch('http://localhost:1337/articles')
-  const posts = await res.json()
-  // By returning { props: posts }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      posts,
-    },
-  }
-}
 
+export const getServerSideProps = async () => {
 
-// export async function getStaticPaths() {
-// 	let paths = await fetch('http://localhost:1337/products')
-// 	paths = paths.map(post => ({
-// 	  params: { slug:post.id }
-// 	}));
-// 	return {
-// 	  paths: paths,
-// 	  fallback: false
-// 	}
-//   }
+  const res = await fetch(`http://localhost:8000/wp-json/wp/v2/posts`);
+	const posts = await res.json()
+	// Pass post data to the page via props
+	return { 
+		props: { posts }
+	}
 
+};
 
 export default Blog

@@ -9,7 +9,7 @@ export const Form = () => {
         console.log(data);
         e.target.reset(); 
     };
-    const [ name, setName ] = useState('us');
+    const [ name, setName ] = useState('');
 
     return(
         <form onSubmit={handleSubmit(onSubmit)}>
