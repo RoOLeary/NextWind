@@ -23,7 +23,7 @@ function Blog({ posts }){
 	})
 
 
-	const someShite = () => {
+	const morePosts = () => {
 		setPage(page + 1)
 		console.log('Example:', 'https://api.exampple.com/endpoint?' + page);
 	}
@@ -53,7 +53,7 @@ function Blog({ posts }){
 									})}
 									</ul>
 								</div>
-								<a className="btn" onClick={someShite} data-page={page}>LOAD MORE</a>
+								<a className="btn" onClick={morePosts} data-page={page}>LOAD MORE</a>
 							</div>
 					</article>
 			</div>
