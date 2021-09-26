@@ -46,10 +46,7 @@ export const Form = () => {
             <input
                 type="email"
                 name="email" 
-                ref={register({
-                    required: true
-                    //validate: (input) => isEmail(input),
-                })}
+           
                 className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white text-sm shadow focus:outline-none focus:shadow-outline w-full"
                 placeholder="Enter Your Email Address"
                 style={{ transition: "all .15s ease" }}

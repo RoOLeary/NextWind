@@ -39,7 +39,7 @@ function Blog({ posts }){
 								<div className="max-w-xl font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
 									<ul>
 									
-									{posts.map((post, i) => {
+									{/* {posts.map((post, i) => {
 										return(
                                         <li className="pb-4" key={i}>
 											<Link href={`/blog/${post.slug}`}>
@@ -50,7 +50,7 @@ function Blog({ posts }){
 											<p dangerouslySetInnerHTML={{ __html:post.excerpt.rendered }} />
 										</li>
 										)
-									})}
+									})} */}
 									</ul>
 								</div>
 								<a className="btn" onClick={morePosts} data-page={page}>LOAD MORE</a>
