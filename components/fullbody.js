@@ -108,6 +108,10 @@ const Fullbody = () => {
 					<h2 className="mb-8 uppercase text-white text-2xl font-bold tracking-widest">My Expertise</h2>
 					<p className="font-serif text-gray-500 text-base md:text-xl max-w-2xl leading-loose">
 						I made my first website in 2008(!) and was hooked from the moment I hit save. Since then I have gained experience across an array of award-winning and globally recognised tech, media, events and advertising companies.<br />
+						These days, I build on top of the amazing Craft CMS and WordPress platforms, or with super-cutting edge stuff like React and my current favourite, Next.js.
+						<br /><br />
+						In my career thus far, I have worked for several award winning advertising, tech event conference, online media and software development companies.
+						<br /><br />
 						I'm highly proficient with HTML, JavaScript, PHP and specialise in developing (and scaling) CMS sites and applications (some of whom serve millions of users per month). Among my weapons of choice are Craft CMS, WordPress, Laravel, React, Vue, SCSS and Tailwind CSS.
 					</p>
 					<span className="absolute top-0 left-0 w-4 h-full bg-gray-300 -ml-20"></span>
@@ -121,8 +125,8 @@ const Fullbody = () => {
 			<div className="w-full flex items-center justify-start relative" data-aos='fade-down-right' data-aos-mirror='true'>
 				<div className="w-auto md:w-3/12"></div>
 				<div className="w-full md:w-8/12 bg-gray-100 py-12 relative flex">
-					<a href="#" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
-						<h3 className="mb-2 uppercase text-gray-800 text-3xl font-bold tracking-widest">SITES</h3>
+					<a href="/work" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
+						<h3 className="mb-2 uppercase text-gray-800 text-3xl font-bold tracking-widest">Work</h3>
 						<p className="text-lg md:text-xl font-serif text-gray-400">Completed Builds</p>
 					</a>
 					<img src="https://images.unsplash.com/photo-1566981731417-d4c8e17a9e82?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;h=900&amp;ixid=eyJhcHBfaWQiOjF9&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1200" className="absolute top-0 left-0 block w-full h-full object-cover" />

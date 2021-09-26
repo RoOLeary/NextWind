@@ -8,7 +8,6 @@ import { ModalContextProvider } from './../../contexts/modalContext';
 const Work = () => {
 
     const ctx = useContext(ModalContext);
-
     let workItems = [
         {
             "title": 'The Next Web',
@@ -53,13 +52,13 @@ const Work = () => {
             "image": 'https://source.unsplash.com/1600x900/?band,music',
         },
         {
-            "title": 'Bubbles and Bricks',
+            "title": 'Run Republic',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
         },
         {
-            "title": 'Ronan O\'Leary',
+            "title": 'Celtic Dublin',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
@@ -83,10 +82,9 @@ const Work = () => {
                         </h1>
 
                         <div className="flex flex-wrap -mx-4 text-left">
-                            {work ? work : 'Nothing here. '}
+                            {work ? work : 'Loading...'}
                         </div>
                         
-                
                     </div>
                 </article>
             </div>

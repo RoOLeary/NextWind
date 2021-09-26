@@ -17,7 +17,7 @@ export const Form = () => {
             Want to get in touch?
             </h4>
             <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-            Complete this form and we will get back to you in 24 hours.
+            Complete this form and we will get back to you within 24 hours.
             </p>
         
             <div className="relative w-full mb-3 mt-8">
@@ -69,7 +69,7 @@ export const Form = () => {
                 ref={register} 
             />
             </div>
-            <div className="text-center mt-6">
+            <div className="text-left mt-6">
                 <input className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" />
             </div>
         </form>
