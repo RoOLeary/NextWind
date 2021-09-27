@@ -1,6 +1,7 @@
 import Aos from 'aos';
 import React, { useEffect, useState } from 'react'; 
 import Form from './form'
+import Slider from './slider';
 
 const Fullbody = () => {
 
@@ -30,15 +31,15 @@ const Fullbody = () => {
 			</div>
 		</div>
 	
-	
+		
 
 		<div className="bg-gray-200 py-24 relative">
-			<div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style={{ height: "80px", transform:"translateZ(0)"}}>
+			{/* <div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style={{ height: "80px", transform:"translateZ(0)"}}>
 				<svg className="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
 					<polygon className="text-gray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
 				</svg>
-			</div>
-			<div className="w-full h-full top-0 left-0 absolute flex flex-col items-center justify-start"></div>
+			</div> */}
+			{/* <div className="w-full h-full top-0 left-0 absolute flex flex-col items-center justify-start"></div>
 			<div className="container mx-auto px-12">
 				<h2 className="text-black uppercase font-bold tracking-widest text-3xl pb-4"></h2>
 				<div className="relative z-10 w-full flex flex-wrap">
@@ -71,7 +72,11 @@ const Fullbody = () => {
 						<h2 className="text-white text-right uppercase font-bold tracking-widest text-3xl absolute bottom-0 right-0 pr-10 pb-10">AGENCY/FREELANCE</h2>
 					</div>
 				</div>
-			</div>
+			</div> */}
+
+			<Slider />
+
+
 			<div className="relative mt-24 -mb-24 bg-black px-12 py-24 flex items-center">
 				<div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style={{ height: "80px", transform: "translateZ(0)"}}>
 					<svg className="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
@@ -88,19 +93,8 @@ const Fullbody = () => {
 				</div>
 			</div>
 		</div>
-			<div className="w-full bg-white flex flex-wrap">	
-				<div className="px-12 md:-px-0 w-full md:w-4/12 bg-white flex items-center justify-start md:justify-end">
-					<div className="shadow-xl md:shadow-none sm:px-4 px-12 py-12 md:pl-36 md:pr-24 bg-white md:-mr-64 relative z-10">
-						<h1 className="mb-8 text-3xl md:text-5xl text-black text-bold uppercase font-bold tracking-widest leading-tight">
-							LATEST TOUR ANNOUNCEMENTS
-						</h1>
-						<h2 className="text-lg md:text-2xl font-serif text-gray-500">Excellent Italian Greyhound</h2>
-					</div>
-				</div>
-				<div className="-mt-64 md:mt-0 w-full md:flex-1">
-					<img src="https://images.unsplash.com/photo-1566981731417-d4c8e17a9e82?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;h=900&amp;ixid=eyJhcHBfaWQiOjF9&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=800" className="w-full h-full object-cover" />
-				</div>
-			</div>
+		
+		
 
 			<div className="bg-black px-12 py-24 flex items-center">
 				<div className="hidden md:block w-3/12"></div>
