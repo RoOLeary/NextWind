@@ -1,4 +1,4 @@
-// next.config.js
-// module.exports = {
-//   basePath: '/app'
-// }
+next.config.js
+module.exports = {
+  basePath: '/app'
+}
