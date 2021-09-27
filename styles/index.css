@@ -26,7 +26,7 @@
 
 .slider__navi {
 	position: absolute;
-  top: 185vh;
+  top: 75vh;
 	right: 20px;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
