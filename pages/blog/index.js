@@ -12,7 +12,7 @@ let initialState = {
 
 function Blog(){
 
-	// const [page, setPage] = useState(initialState.page)
+	const [page, setPage] = useState(initialState.page)
 	// console.log(posts);
 	// const psts = posts.map((post, i) => {
 	// 	return(
@@ -23,10 +23,10 @@ function Blog(){
 	// })
 
 
-	// const morePosts = () => {
-	// 	setPage(page + 1)
-	// 	console.log('Example:', 'https://api.exampple.com/endpoint?' + page);
-	// }
+	const morePosts = () => {
+		setPage(page + 1)
+		console.log('Example:', 'https://api.exampple.com/endpoint?' + page);
+	}
 	
   return (
     <Layout>
@@ -40,8 +40,8 @@ function Blog(){
 									<ul>
 									
 									
-                                        <li className="pb-4" key={i}>
-											<Link href={'#'}>
+                                        <li className="pb-4">
+											<Link href={`/blog/first`}>
 												<a>
 													<h3 className="text-bold pb-2 text-2xl"><strong>Post title</strong></h3>
 												</a>
