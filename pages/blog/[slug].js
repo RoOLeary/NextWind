@@ -1,14 +1,12 @@
-import React from 'react'; 
+import React, { useEffect } from 'react'; 
 import Layout from '../../components/layout'
 
 const Post = ({ post }) => {
 
-    
-    
-    // let post = article;
 
-    // console.log(post[0].title.rendered);
-   
+    
+
+
 
     return(
         <Layout>
@@ -24,6 +22,7 @@ const Post = ({ post }) => {
                     </div>
                 </article>
             </div>
+            
         </Layout>
         )
     }
@@ -36,9 +35,9 @@ const Post = ({ post }) => {
         const posts = await res.json();
         // Get the paths we want to pre-render based on posts
         const paths = posts.map((post) => ({
-        params: { slug: post.slug.toString() },
+            params: { slug: post.slug.toString() },
         }));
-        // We'll pre-render only these paths at build time.
+        // And we'll pre-render only these paths at build time.
         return { paths, fallback: false };
     }
 

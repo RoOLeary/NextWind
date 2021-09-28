@@ -5,20 +5,21 @@ import Layout from '../../components/layout'
 import Link from 'next/link'
 import { useState } from 'react'
 
-let initialState = {
-	page: 1
-}
-
 
 function Blog({ allPosts }){
 
-    const posts = allPosts;
-    console.log(posts);
-	const [page, setPage] = useState(initialState.page)
+    const psts = allPosts;
+    console.log(psts);
+    let [page, setPage] = useState(2)
+    const [posts, setPosts] = useState(psts)
 	
-	const morePosts = () => {
-		setPage(page + 1)
-		console.log('Example:', 'https://api.exampple.com/endpoint?' + page);
+	const morePosts = async (e) => {
+        e.preventDefault();
+        setPage(page + 1);
+        console.log(page);
+        const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?page=${page}`);
+        const newPosts = await res.json();
+        setPosts([...posts, ...newPosts]);;
 	}
 	
   return (
