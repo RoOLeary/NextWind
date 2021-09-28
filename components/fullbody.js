@@ -98,7 +98,7 @@ const Fullbody = () => {
 		</div>
 		
 		<div className="w-full h-auto border-black bg-white flex justify-end">
-            <img src="https://ronan-oleary.com/wp-content/uploads/2021/09/ro-flip.jpeg" className="relative block w-full h-50 object-cover -mt-12" />
+            <img src="https://ronan-oleary.com/wp-content/uploads/2021/09/ro-flip2.jpg" className="relative block w-full h-50 object-cover -mt-12" />
 			<div className="w-64 bg-gray-800"></div>
 		</div>
 		
