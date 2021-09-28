@@ -176,7 +176,7 @@ const Fullbody = () => {
 	</div>
 	
 
-	<div className="relative bg-black px-12 py-24 flex items-center">
+	<div className="relative bg-black px-8 py-24 flex items-center">
 		<div className="hidden md:block w-3/12"></div>
 		<div className="relative flex flex-col min-w-0 break-words md:w-1/2 mb-6 shadow-lg bg-gray-300">
 			<div className="flex-auto p-5 lg:p-10">
