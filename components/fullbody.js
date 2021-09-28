@@ -113,8 +113,6 @@ const Fullbody = () => {
 						I made my first website in 2008(!) and was hooked from the moment I hit save. Since then I have gained experience across an array of award-winning and globally recognised tech, media, events and advertising companies.<br />
 						These days, I build on top of the amazing Craft CMS and WordPress platforms, or with super-cutting edge stuff like React and my current favourite, Next.js.
 						<br /><br />
-						In my career thus far, I have worked for several award winning advertising, tech event conference, online media and software development companies.
-						<br /><br />
 						I'm highly proficient with HTML, JavaScript, PHP and specialise in developing (and scaling) CMS sites and applications (some of whom serve millions of users per month). Among my weapons of choice are Craft CMS, WordPress, Laravel, React, Vue, SCSS and Tailwind CSS.
 					</p>
 					<span className="absolute top-0 left-0 w-4 h-full bg-gray-300 -ml-20"></span>
@@ -176,7 +174,7 @@ const Fullbody = () => {
 	</div>
 	
 
-	<div className="relative bg-black px-8 py-24 flex items-center">
+	<div className="relative bg-black px-4 py-24 flex items-center">
 		<div className="hidden md:block w-3/12"></div>
 		<div className="relative flex flex-col min-w-0 break-words md:w-1/2 mb-6 shadow-lg bg-gray-300">
 			<div className="flex-auto p-5 lg:p-10">
