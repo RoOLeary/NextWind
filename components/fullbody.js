@@ -107,7 +107,7 @@ const Fullbody = () => {
 				<div className="hidden md:block w-3/12"></div>
 				<div className="flex-1 relative" data-aos='fade-down'>
 					<div className="font-serif text-white opacity-75 text-base md:text-xl max-w-2xl leading-loose">
-						<h2 className="text-white font-bold tracking-widest text-3xl pb-4">My Expertise</h2>
+						<h2 className="text-white font-bold tracking-widest text-3xl pb-4">What I do</h2>
 					</div>
 					<p className="font-serif text-gray-500 text-base md:text-xl max-w-2xl leading-loose">
 						I made my first website in 2008(!) and was hooked from the moment I hit save. Since then I have gained experience across an array of award-winning and globally recognised tech, media, events and advertising companies.<br />
