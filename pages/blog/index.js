@@ -10,16 +10,17 @@ function Blog({ allPosts }){
 
     const psts = allPosts;
     console.log(psts);
-    let [page, setPage] = useState(2)
+    let [page, setPage] = useState(10)
     const [posts, setPosts] = useState(psts)
 	
 	const morePosts = async (e) => {
         e.preventDefault();
-        setPage(page + 1);
-        console.log(page);
-        const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?page=${page}`);
+        console.log(page + 10);
+        setPage(page + 10);
+        // console.log(page);
+        const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?per_page=${page}`);
         const newPosts = await res.json();
-        setPosts([...posts, ...newPosts]);;
+        setPosts([...newPosts]);
 	}
 	
   return (
