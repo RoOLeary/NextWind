@@ -74,7 +74,7 @@ const Fullbody = () => {
 				</div>
 			</div> */}
 
-			<Slider />
+			
 
 
 			<div className="relative mt-24 -mb-24 bg-black px-12 py-24 flex items-center">
@@ -114,11 +114,13 @@ const Fullbody = () => {
 				</div>
 			</div>
 	
+			<Slider />
+			
 			<div className="w-full h-24 border-black bg-white flex justify-end">
 				<div className="w-64 bg-black"></div>
 			</div>
 
-			<div className="w-full flex items-center justify-start relative" data-aos='fade-down-right' data-aos-mirror='true'>
+			<div className="w-full flex items-center justify-start relative" data-aos='fade-left' data-aos-mirror='true'>
 				<div className="w-auto md:w-3/12"></div>
 				<div className="w-full md:w-8/12 bg-gray-100 py-12 relative flex">
 					<a href="/work" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
@@ -136,7 +138,7 @@ const Fullbody = () => {
 		</div>
 		
 
-		<div className="w-full flex items-center justify-start relative" data-aos='fade-up-right' data-aos-mirror='true'>
+		<div className="w-full flex items-center justify-start relative" data-aos='fade-right' data-aos-mirror='true'>
 			<div className="w-auto md:w-3/12"></div>
 			<div className="w-full md:w-8/12 bg-gray-100 py-12 relative flex">
 				<a href="#" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
