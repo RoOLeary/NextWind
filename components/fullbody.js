@@ -145,7 +145,7 @@ const Fullbody = () => {
 		<div className="w-full flex items-center justify-start relative" data-aos='fade-up' data-aos-mirror='true'>
 				<div className="w-auto md:w-3/12"></div>
 				<div className="w-full md:w-8/12 bg-gray-100 py-12 relative flex">
-					<a href="/work" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
+					<a href="/blog" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
 						<h3 className="mb-2 uppercase text-gray-800 text-3xl font-bold tracking-widest">Words</h3>
 						<p className="text-lg md:text-xl font-serif text-gray-400">Latest News and Ramblings</p>
 					</a>
