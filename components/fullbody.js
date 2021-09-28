@@ -99,7 +99,9 @@ const Fullbody = () => {
 			<div className="bg-black px-12 py-24 flex items-center">
 				<div className="hidden md:block w-3/12"></div>
 				<div className="flex-1 relative">
-					<h2 className="mb-8 uppercase text-white text-2xl font-bold tracking-widest">My Expertise</h2>
+					<div className="font-serif text-white opacity-75 text-base md:text-xl max-w-2xl leading-loose">
+						<h2 className="text-white font-bold tracking-widest text-3xl pb-4">My Expertise</h2>
+					</div>
 					<p className="font-serif text-gray-500 text-base md:text-xl max-w-2xl leading-loose">
 						I made my first website in 2008(!) and was hooked from the moment I hit save. Since then I have gained experience across an array of award-winning and globally recognised tech, media, events and advertising companies.<br />
 						These days, I build on top of the amazing Craft CMS and WordPress platforms, or with super-cutting edge stuff like React and my current favourite, Next.js.
