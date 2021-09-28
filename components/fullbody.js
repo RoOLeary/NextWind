@@ -25,8 +25,11 @@ const Fullbody = () => {
 		<div className="py-24 px-12 md:px-32">
 			<div className="container mx-auto">
 				<h1 className="text-2xl md:text-6xl font-black  text-black tracking-widest leading-normal mb-12 pl-10">Hello There, I'm Ronan</h1>
-				<div className="font-serif leading-loose tracking-wide text-base md:text-lg text-black opacity-50 max-w-lg md:ml-64">
-					<p>Versatile, experienced Web Developer and architect, with 12 years professional experience, predominantly in front-end engineering, but not shy of working with back-end languages, technologies and configurations.</p>
+				<div className="flex">
+					<img class="starting-logo dark-version default-logo" alt="Ronan O'Leary" src="https://ronan-oleary.com/wp-content/uploads/2017/06/rosenberg.png" style={{ "height": "150px" }} />
+					<div className="font-serif leading-loose tracking-wide text-base md:text-lg text-black opacity-50 max-w-lg md:ml-12">
+						<p>Versatile, experienced Web Developer and architect, with 12 years professional experience, predominantly in front-end engineering, but not shy of working with back-end languages, technologies and configurations.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -85,7 +88,7 @@ const Fullbody = () => {
 				</div>
 				<div className="hidden md:block w-3/12"></div>
 				<div className="flex-1 relative">
-					<div className="font-serif text-white opacity-75 text-base md:text-xl max-w-2xl leading-loose">
+					<div className="font-serif text-white opacity-75 text-base md:text-xl max-w-2xl leading-loose" data-aos='fade-in-up'>
 						<h2 className="text-white font-bold tracking-widest text-3xl pb-4">About Me</h2>
 						<p>Branding is the foundation of your business. A fantastic digital experience relies on the brand resonating perfectly with your target audience. We help businesses assert their position in their industry by providing a brand identity that's solid and memorable.</p>
 					</div>
@@ -94,6 +97,10 @@ const Fullbody = () => {
 			</div>
 		</div>
 		
+		<div className="w-full h-auto border-black bg-white flex justify-end">
+            <img src="https://algarvemusicseries.com/wp-content/uploads/2019/11/music.jpeg" className="relative block w-full h-full object-cover -mt-12" />
+			<div className="w-64 bg-gray-800"></div>
+		</div>
 		
 
 			<div className="bg-black px-12 py-24 flex items-center">
