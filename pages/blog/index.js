@@ -10,8 +10,9 @@ let initialState = {
 }
 
 
-function Blog(){
+function Blog({ posts }){
 
+    console.log(posts);
 	const [page, setPage] = useState(initialState.page)
 	// console.log(posts);
 	// const psts = posts.map((post, i) => {
@@ -39,16 +40,20 @@ function Blog(){
 								<div className="max-w-xl font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
 									<ul>
 									
-									
-                                        <li className="pb-4">
-											<Link href={`/blog/first`}>
-												<a>
-													<h3 className="text-bold pb-2 text-2xl"><strong>Post title</strong></h3>
-												</a>
-											</Link>
-										
-										</li>
-								
+									{posts.map((post, i) => {
+                                        console.log(post);
+                                       return( 
+                                        
+                                            <li className="pb-4" key={i}>
+                                                <Link href={`/blog/${post.slug}`}>
+                                                    <a>
+                                                        <h3 className="text-bold pb-2 text-2xl"><strong>{post.title.rendered}</strong></h3>
+                                                    </a>
+                                                </Link>
+                                            
+                                            </li>
+                                        )
+                                    })}
 									</ul>
 								</div>
 								<a className="btn" onClick={morePosts} data-page={page}>LOAD MORE</a>
@@ -60,15 +65,16 @@ function Blog(){
 }
 
 
-// export const getServerSideProps = async () => {
+export const getServerSideProps = async () => {
 
-//   const res = await fetch(`http://localhost:8000/wp-json/wp/v2/posts`);
-// 	const posts = await res.json()
-// 	// Pass post data to the page via props
-// 	return { 
-// 		props: { posts }
-// 	}
+  const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts`);
+	const posts = await res.json()
+    // Pass post data to the page via props
+    
+	return { 
+		props: { posts }
+	}
 
-// };
+};
 
 export default Blog
