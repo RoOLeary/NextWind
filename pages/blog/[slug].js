@@ -6,7 +6,7 @@ const Post = ({ article }) => {
 
     
     
-    console.log(article);
+    let post = article[0];
    
 
     return(
@@ -14,16 +14,12 @@ const Post = ({ article }) => {
             <div className="container mx-auto md:px-12">
                 <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-24 bg-white">
-                        <h1 className="text-2xl md:text-5xl font-black uppercase text-gray-800 tracking-widest leading-tight mb-4 hover:opacity-50">
-                          Article Title
+                        <h1 className="text-2xl md:text-5xl font-black text-gray-800 tracking-widest leading-tight mb-4 hover:opacity-50">
+                          {post.title.rendered}
                         </h1>
                         <small><strong>By Ro</strong></small>
                         <img src="//placedog.net/1200/350" className="mx-auto mt-4" />
-						<div className="max-w-m font-serif leading-loose tracking-wide text-lg text-black mt-6 mb-12 format-content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum neque vitae semper blandit. Praesent sodales at dui id viverra. Nulla erat felis, suscipit non mauris in, aliquam venenatis lorem. Nam quis fringilla lorem. Donec nisl erat, mollis a nunc vel, venenatis fringilla urna. Vivamus auctor aliquam ex. Nulla porttitor magna ligula, eget varius lectus imperdiet eu. In semper nibh est, sed fermentum sapien auctor in. Aenean orci quam, pellentesque vel sem ac, faucibus consectetur mauris. Aenean sit amet consectetur lorem, mollis hendrerit odio. Vestibulum nec fringilla neque, et convallis erat. Sed vestibulum purus at odio interdum, eget bibendum nisi imperdiet. Duis vel laoreet dui. Phasellus varius pharetra dolor vel vehicula. Donec et malesuada ante, ut posuere lorem. Vestibulum et tellus vulputate neque elementum mattis.
-
-
-                        </div>
+						<div className="max-w-m font-serif leading-loose tracking-wide text-lg text-black mt-6 mb-12 format-content" dangerouslySetInnerHTML={{ __html : post.content.rendered }} />
                     </div>
                 </article>
             </div>
@@ -31,8 +27,16 @@ const Post = ({ article }) => {
         )
     }
 
-
-
+    export const getServerSideProps = async ({ params: { slug } }) => {
+        // params contains the post `id`.
+        // If the route is like /posts/1, then params.id is 1
+        const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?slug=${slug}`);
+        const article = await res.json()
+        
+        // Pass post data to the page via props
+        return { props: { article } }
+      }
+    
 
 export default Post;
 
