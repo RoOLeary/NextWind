@@ -93,10 +93,10 @@ export default function Slider() {
                         <div className="flex__item flex__item--left">
                         <div className="flex__content">
                             <p className="text--sub">One</p>
-                            <h1 className="text--big font-serif">Cello</h1>
+                            <h1 className="text--big font-serif">Trigger</h1>
                             {/* <p className="text--normal"></p>  */}
                         </div>
-                        <p className="text__background font-serif">Cello</p>
+                        <p className="text__background font-serif">Trigger Media</p>
                         </div>
                         <div className="flex__item flex__item--right"></div>
                         <img className="isabel_img hidden md:block" src="https://isabelvaz.com/wp-content/uploads/2020/03/2E8A9134-scaled.jpg" />

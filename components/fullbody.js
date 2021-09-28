@@ -88,7 +88,7 @@ const Fullbody = () => {
 				</div>
 				<div className="hidden md:block w-3/12"></div>
 				<div className="flex-1 relative">
-					<div className="font-serif text-white opacity-75 text-base md:text-xl max-w-2xl leading-loose" data-aos='fade-in-up'>
+					<div className="font-serif text-white opacity-75 text-base md:text-xl max-w-2xl leading-loose pb-12" data-aos='fade-up'>
 						<h2 className="text-white font-bold tracking-widest text-3xl pb-4">About Me</h2>
 						<p>Branding is the foundation of your business. A fantastic digital experience relies on the brand resonating perfectly with your target audience. We help businesses assert their position in their industry by providing a brand identity that's solid and memorable.</p>
 					</div>
@@ -98,14 +98,14 @@ const Fullbody = () => {
 		</div>
 		
 		<div className="w-full h-auto border-black bg-white flex justify-end">
-            <img src="https://ronan-oleary.com/wp-content/uploads/2021/09/ro-flip2.jpg" className="relative block w-full h-50 object-cover -mt-12" />
+            <img src="https://ronan-oleary.com/wp-content/uploads/2021/09/ro-flip2.jpg" className="relative block w-full h-50 object-cover -mt-12" data-aos='fade-right' />
 			<div className="w-64 bg-gray-800"></div>
 		</div>
 		
 
 			<div className="bg-black px-12 py-24 flex items-center">
 				<div className="hidden md:block w-3/12"></div>
-				<div className="flex-1 relative">
+				<div className="flex-1 relative" data-aos='fade-down'>
 					<div className="font-serif text-white opacity-75 text-base md:text-xl max-w-2xl leading-loose">
 						<h2 className="text-white font-bold tracking-widest text-3xl pb-4">My Expertise</h2>
 					</div>
@@ -125,7 +125,7 @@ const Fullbody = () => {
 				<div className="w-64 bg-black"></div>
 			</div>
 
-			<div className="w-full flex items-center justify-start relative" data-aos='fade-left' data-aos-mirror='true'>
+			<div className="w-full flex items-center justify-start relative" data-aos='fade-up' data-aos-mirror='true'>
 				<div className="w-auto md:w-3/12"></div>
 				<div className="w-full md:w-8/12 bg-gray-100 py-12 relative flex">
 					<a href="/work" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
@@ -143,7 +143,7 @@ const Fullbody = () => {
 		</div>
 		
 
-		<div className="w-full flex items-center justify-start relative" data-aos='fade-right' data-aos-mirror='true'>
+		<div className="w-full flex items-center justify-start relative" data-aos='fade-up' data-aos-mirror='true'>
 			<div className="w-auto md:w-3/12"></div>
 			<div className="w-full md:w-8/12 bg-gray-100 py-12 relative flex">
 				<a href="#" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
