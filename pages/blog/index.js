@@ -10,20 +10,12 @@ let initialState = {
 }
 
 
-function Blog({ posts }){
+function Blog({ allPosts }){
 
+    const posts = allPosts;
     console.log(posts);
 	const [page, setPage] = useState(initialState.page)
-	// console.log(posts);
-	// const psts = posts.map((post, i) => {
-	// 	return(
-	// 		<li className="pb-4" key={i}>
-	// 			{post.title.rendered}
-	// 		</li>
-	// 	)
-	// })
-
-
+	
 	const morePosts = () => {
 		setPage(page + 1)
 		console.log('Example:', 'https://api.exampple.com/endpoint?' + page);
@@ -31,48 +23,42 @@ function Blog({ posts }){
 	
   return (
     <Layout>
-				<div className="container mx-auto md:px-12">
-					<article className="relative z-10 w-full flex flex-wrap mb-24">
-							<div className="w-full bg-white p-12 md:p-24 bg-white">
-								<h1 className="text-2xl md:text-5xl font-black uppercase text-gray-800 tracking-widest leading-tight mb-12 hover:opacity-50">
-									BLOG
-								</h1>
-								<div className="max-w-xl font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
-									<ul>
-									
-									{posts.map((post, i) => {
-                                        console.log(post);
-                                       return( 
-                                        
-                                            <li className="pb-4" key={i}>
-                                                <Link href={`/blog/${post.slug}`}>
-                                                    <a>
-                                                        <h3 className="text-bold pb-2 text-2xl"><strong>{post.title.rendered}</strong></h3>
-                                                    </a>
-                                                </Link>
-                                            
-                                            </li>
-                                        )
-                                    })}
-									</ul>
-								</div>
-								<a className="btn" onClick={morePosts} data-page={page}>LOAD MORE</a>
-							</div>
-					</article>
-			</div>
-		</Layout>
+        <div className="container mx-auto md:px-12">
+            <article className="relative z-10 w-full flex flex-wrap mb-24">
+                    <div className="w-full bg-white p-12 md:p-24 bg-white">
+                        <h1 className="text-2xl md:text-5xl font-black uppercase text-gray-800 tracking-widest leading-tight mb-12 hover:opacity-50">
+                            BLOG
+                        </h1>
+                        <div className="max-w-xl font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
+                            <ul>
+                            
+                                {posts.map((post, idx) => {
+                                    return (
+                                    <li key={idx}>
+                                        <Link href={`/blog/${post.slug}`}>
+                                            <a>{post.title.rendered}</a>
+                                        </Link>
+                                    </li>);
+                                })}
+                               
+                            </ul>
+                        </div>
+                        <a className="btn" onClick={morePosts} data-page={page}>LOAD MORE</a>
+                    </div>
+            </article>
+        </div>
+    </Layout>
   )
 }
 
 
-export const getServerSideProps = async () => {
+export async function getStaticProps(){
 
-  const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts`);
-	const posts = await res.json()
+    const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts`);
+	const allPosts = await res.json()
     // Pass post data to the page via props
-    
 	return { 
-		props: { posts }
+		props: { allPosts }
 	}
 
 };
