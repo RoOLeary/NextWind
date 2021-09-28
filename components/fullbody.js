@@ -130,7 +130,7 @@ const Fullbody = () => {
 				<div className="w-full md:w-8/12 bg-gray-100 py-12 relative flex">
 					<a href="/work" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
 						<h3 className="mb-2 uppercase text-gray-800 text-3xl font-bold tracking-widest">Work</h3>
-						<p className="text-lg md:text-xl font-serif text-gray-400">Completed Builds</p>
+						<p className="text-lg md:text-xl font-serif text-gray-400">Various projects, freelance builds, long term dev</p>
 					</a>
 					<img src="https://source.unsplash.com/1600x900/?website" className="absolute top-0 left-0 block w-full h-full object-cover" />
 				</div>
