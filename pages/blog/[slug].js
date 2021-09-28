@@ -12,7 +12,7 @@ const Post = ({ article }) => {
     return(
         <Layout>
             <div className="container mx-auto md:px-12">
-                <article className="relative z-10 w-full flex flex-wrap mb-24" data-aos="fade-up">
+                <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-24 bg-white">
                         <h1 className="text-2xl md:text-5xl font-black uppercase text-gray-800 tracking-widest leading-tight mb-4 hover:opacity-50">
                           Article Title
