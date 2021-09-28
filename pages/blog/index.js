@@ -10,7 +10,7 @@ function Blog({ allPosts }){
 
     const psts = allPosts;
     console.log(psts);
-    let [page, setPage] = useState(10)
+    let [page, setPage] = useState(20)
     const [posts, setPosts] = useState(psts)
 	
 	const morePosts = async (e) => {
