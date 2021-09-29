@@ -13,8 +13,8 @@ function Blog({ allPosts }){
     const [loading, setLoading] = useState(false)
 
     const handleLoadMore = () => {
-        setPage(page => page + 1);
-        // console.log(`page has updated. Count is now: ${page}`)
+        setPage(prevPage => prevPage + 1);
+        console.log(`page has updated. Count is now: ${page}`)
     };	
 
     useEffect(() => {
@@ -23,6 +23,7 @@ function Blog({ allPosts }){
                 const response = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?page=${page}`);
                 const newArticles = await response.json()
                 setPosts((posts) => [...posts, ...newArticles]);
+                console.log(posts);
             }
         })()
     }, [page])
