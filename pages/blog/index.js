@@ -10,18 +10,18 @@ import useSWR, { useSWRInfinite } from "swr";
 const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 function Blog({ allPosts }){
-
     const [page, setPage] = useState(1)
+    const { data } = useSWR(`?page=${page}`, fetcher)
     const [posts, setPosts] = useState(allPosts)
     const [loading, setLoading] = useState(false)
 
 
     const handleLoadMore = () => {
         setPage(prevPage => prevPage + 1);
-        // setPosts([...posts, ...data]);
     };	
-    // const { data, error } = useSWR(`https://ronan-oleary.com/wp-json/wp/v2/posts/?page=${page}`, fetcher)
-    // console.log(data);
+    
+    
+    
     
     useEffect(() => {
         (async () => {
@@ -30,6 +30,7 @@ function Blog({ allPosts }){
                 const response = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?page=${page}`);
                 const newArticles = await response.json()
                 setPosts([...posts, ...newArticles]);
+                console.log(newArticles);
                 setLoading(false);
             }
         })()
