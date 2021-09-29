@@ -4,7 +4,9 @@ import Form from '../../components/form'
 import Layout from '../../components/layout'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import useSWR, { useSWRInfinite } from "swr";
 
+const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 function Blog({ allPosts }){
 
@@ -12,18 +14,23 @@ function Blog({ allPosts }){
     const [posts, setPosts] = useState(allPosts)
     const [loading, setLoading] = useState(false)
 
+
     const handleLoadMore = () => {
         setPage(prevPage => prevPage + 1);
-        console.log(`page has updated. Count is now: ${page}`)
+        // setPosts([...posts, ...data]);
     };	
 
+    // const { data, error } = useSWR(`https://ronan-oleary.com/wp-json/wp/v2/posts/?page=${page}`, fetcher)
+    // console.log(data);
+    
     useEffect(() => {
         (async () => {
             if(page > 1){
+                setLoading(true);
                 const response = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?page=${page}`);
                 const newArticles = await response.json()
-                setPosts((posts) => [...posts, ...newArticles]);
-                console.log(posts);
+                setPosts([...posts, ...newArticles]);
+                setLoading(false);
             }
         })()
     }, [page])
@@ -38,7 +45,6 @@ function Blog({ allPosts }){
                         </h1>
                         <div className="max-w-xl font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
                             <ul>
-                                {loading ? 'Loading' : ''}
                                 {posts.map((post, idx) => {
                                     return (
                                     <li key={idx}>
@@ -50,7 +56,7 @@ function Blog({ allPosts }){
                                
                             </ul>
                         </div>
-                        <button className="btn" onClick={handleLoadMore} data-page={page}>LOAD MORE</button>
+                        <button className="btn" onClick={handleLoadMore} data-page={page}>{loading ? 'LOADING...' : 'LOAD MORE'}</button>
                     </div>
             </article>
         </div>
