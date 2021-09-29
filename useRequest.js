@@ -1,8 +1,7 @@
 import useSWR from "swr";
-import { useSWRInfinite } from 'swr/infinite';
+import useSWRInfinite from 'swr/infinite';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
-
 const baseUrl = "https://ronan-oleary.com/wp-json/wp/v2";
 
 export const useGetPosts = (path) => {
@@ -17,18 +16,26 @@ export const useGetPosts = (path) => {
 };
 
 export const usePaginatePosts = (path) => {
+  
   if (!path) {
     throw new Error("Path is required");
   }
 
   const url = baseUrl + path;
+
   const PAGE_LIMIT = 10;
 
-  const { data, error, size, setSize } = useSwr(
-    (index) => `${url}?page=${index + 1}&_per_page=${PAGE_LIMIT}`,
+  const { data, error, size, setSize } = useSWR(
+    (index) => `${url}?page=${index + 1}`,
     fetcher
   );
-  const posts = data ? [].concat(...data) : [];
+
+  console.log(data);
+  
+  const posts = data ? data : [];
+
+
+
   const isLoadingInitialData = !data && !error;
   const isLoadingMore =
     isLoadingInitialData ||
