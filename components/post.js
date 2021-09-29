@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Post({ post }) {
     const { title, excerpt, slug } = post;
-    console.log(excerpt)
+    
     return (
       <li className="Card">
           <Link href={`/blog/${slug}`}>

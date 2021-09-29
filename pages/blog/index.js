@@ -1,43 +1,25 @@
-import React from 'react'; 
-import Fullbody from '../../components/fullbody'
-import Form from '../../components/form'
+import { usePaginatePosts } from "../../useRequest"
 import Layout from '../../components/layout'
-import Post from '../../components/post'
-import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import useSWR, { useSWRInfinite } from "swr";
+import Post from "../../components/post";
+import { useState } from 'react';
 
-const fetcher = (...args) => fetch(...args).then(res => res.json())
+export default function Blog() {
+  const [pageIndex, setPageIndex] = useState(0)
+  const [loading, setLoading] = useState(false)
+  const {
+    posts,
+    error,
+    isLoadingMore,
+    size,
+    setSize,
+    isReachingEnd,
+  } = usePaginatePosts("/posts")
 
-function Blog({ allPosts }){
-    const [page, setPage] = useState(1)
-    const { data } = useSWR(`?page=${page}`, fetcher)
-    const [posts, setPosts] = useState(allPosts)
-    const [loading, setLoading] = useState(false)
+  if (error) return <h1>Something went wrong!</h1>
+  if (!posts) return <h1>Loading...</h1>
 
-
-    const handleLoadMore = () => {
-        setPage(prevPage => prevPage + 1);
-    };	
-    
-    
-    
-    
-    useEffect(() => {
-        (async () => {
-            if(page > 1){
-                setLoading(true);
-                const response = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?page=${page}`);
-                const newArticles = await response.json()
-                setPosts([...posts, ...newArticles]);
-                console.log(newArticles);
-                setLoading(false);
-            }
-        })()
-    }, [page])
-	
   return (
-    <Layout>
+      <Layout>
         <div className="container mx-auto md:px-12">
             <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-24 bg-white">
@@ -46,32 +28,26 @@ function Blog({ allPosts }){
                         </h1>
                         <div className="max-w-xl font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
                             <ul>
-                                {posts.map((post, idx) => {
-                                    return (
+                                {posts.map((post, idx) => (
                                     <Post post={post} key={idx} />
-                                    );
-                                })}
-                               
+                                ))}
+
+                                <button
+                                    disabled={isLoadingMore || isReachingEnd}
+                                    onClick={() => setSize(size + 1)}
+                                >
+                                    {isLoadingMore
+                                    ? "LOADING..."
+                                    : isReachingEnd
+                                    ? "NO MORE POSTS"
+                                    : "LOAD MORE"}
+                                </button>           
                             </ul>
                         </div>
-                        <button className="btn" onClick={handleLoadMore} data-page={page}>{loading ? 'LOADING...' : 'LOAD MORE'}</button>
                     </div>
             </article>
         </div>
     </Layout>
+   
   )
 }
-
-
-export async function getStaticProps(){
-
-    const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts`);
-	const allPosts = await res.json()
-    // Pass post data to the page via props
-	return { 
-		props: { allPosts }
-	}
-
-};
-
-export default Blog
