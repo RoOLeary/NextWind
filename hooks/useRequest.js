@@ -1,4 +1,5 @@
-import useSWR, { useSWRInfinite } from "swr";
+import useSWR from "swr";
+import { useSWRInfinite } from 'swr/infinite';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -10,7 +11,7 @@ export const useGetPosts = (path) => {
   }
 
   const url = baseUrl + path;
-  const { data: posts, error } = useSWR(url, fetcher);
+  const { data: posts, error } = useSWRInfinite(url, fetcher);
 
   return { posts, error };
 };
@@ -21,13 +22,12 @@ export const usePaginatePosts = (path) => {
   }
 
   const url = baseUrl + path;
-  const PAGE_LIMIT = 5;
+  const PAGE_LIMIT = 10;
 
-  const { data, error, size, setSize } = useSWRInfinite(
-    (index) => `${url}?_page=${index + 1}&_limit=${PAGE_LIMIT}`,
+  const { data, error, size, setSize } = useSwr(
+    (index) => `${url}?page=${index + 1}&_per_page=${PAGE_LIMIT}`,
     fetcher
   );
-
   const posts = data ? [].concat(...data) : [];
   const isLoadingInitialData = !data && !error;
   const isLoadingMore =

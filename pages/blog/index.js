@@ -2,6 +2,7 @@ import React from 'react';
 import Fullbody from '../../components/fullbody'
 import Form from '../../components/form'
 import Layout from '../../components/layout'
+import Post from '../../components/post'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import useSWR, { useSWRInfinite } from "swr";
@@ -19,7 +20,6 @@ function Blog({ allPosts }){
         setPage(prevPage => prevPage + 1);
         // setPosts([...posts, ...data]);
     };	
-
     // const { data, error } = useSWR(`https://ronan-oleary.com/wp-json/wp/v2/posts/?page=${page}`, fetcher)
     // console.log(data);
     
@@ -47,11 +47,8 @@ function Blog({ allPosts }){
                             <ul>
                                 {posts.map((post, idx) => {
                                     return (
-                                    <li key={idx}>
-                                        <Link href={`/blog/${post.slug}`}>
-                                            <a>{post.title.rendered}</a>
-                                        </Link>
-                                    </li>);
+                                    <Post post={post} key={idx} />
+                                    );
                                 })}
                                
                             </ul>
