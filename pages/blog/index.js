@@ -8,19 +8,19 @@ import { useState } from 'react'
 
 function Blog({ allPosts }){
 
-    const psts = allPosts;
-    console.log(psts);
-    let [page, setPage] = useState(20)
-    const [posts, setPosts] = useState(psts)
+    let [pageIndex, setPageIndex] = useState(2)
+    const [posts, setPosts] = useState(allPosts)
+
+   
 	
 	const morePosts = async (e) => {
         e.preventDefault();
-        console.log(page + 10);
-        setPage(page + 10);
-        // console.log(page);
-        const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?per_page=${page}`);
+        console.log(pageIndex + 1);
+        setPageIndex(pageIndex + 1);
+        
+        const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?page=${pageIndex}`);
         const newPosts = await res.json();
-        setPosts([...newPosts]);
+        setPosts([...posts, ...newPosts]);
 	}
 	
   return (
@@ -45,7 +45,7 @@ function Blog({ allPosts }){
                                
                             </ul>
                         </div>
-                        <a className="btn" onClick={morePosts} data-page={page}>LOAD MORE</a>
+                        <a className="btn" onClick={morePosts} data-page={pageIndex}>LOAD MORE</a>
                     </div>
             </article>
         </div>
