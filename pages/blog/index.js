@@ -3,25 +3,29 @@ import Fullbody from '../../components/fullbody'
 import Form from '../../components/form'
 import Layout from '../../components/layout'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 function Blog({ allPosts }){
 
-    let [pageIndex, setPageIndex] = useState(2)
+    const [page, setPage] = useState(1)
     const [posts, setPosts] = useState(allPosts)
+    const [loading, setLoading] = useState(false)
 
-   
-	
-	const morePosts = async (e) => {
-        e.preventDefault();
-        console.log(pageIndex + 1);
-        setPageIndex(pageIndex + 1);
-        
-        const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?page=${pageIndex}`);
-        const newPosts = await res.json();
-        setPosts([...posts, ...newPosts]);
-	}
+    const handleLoadMore = () => {
+        setPage(page => page + 1);
+        // console.log(`page has updated. Count is now: ${page}`)
+    };	
+
+    useEffect(() => {
+        (async () => {
+            if(page > 1){
+                const response = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?page=${page}`);
+                const newArticles = await response.json()
+                setPosts((posts) => [...posts, ...newArticles]);
+            }
+        })()
+    }, [page])
 	
   return (
     <Layout>
@@ -33,7 +37,7 @@ function Blog({ allPosts }){
                         </h1>
                         <div className="max-w-xl font-serif leading-loose tracking-wide text-lg text-black mb-12 format-content">
                             <ul>
-                            
+                                {loading ? 'Loading' : ''}
                                 {posts.map((post, idx) => {
                                     return (
                                     <li key={idx}>
@@ -45,7 +49,7 @@ function Blog({ allPosts }){
                                
                             </ul>
                         </div>
-                        <a className="btn" onClick={morePosts} data-page={pageIndex}>LOAD MORE</a>
+                        <button className="btn" onClick={handleLoadMore} data-page={page}>LOAD MORE</button>
                     </div>
             </article>
         </div>
