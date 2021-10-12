@@ -154,11 +154,11 @@ const Fullbody = () => {
 				<div className="w-1/12 absolute top-0 right-0 h-full bg-black"></div>
 			</div>
 		
-		<div className="w-full h-12 border-black bg-white flex justify-end">
+		{/* <div className="w-full h-12 border-black bg-white flex justify-end">
 			<div className="w-64 bg-black"></div>
-		</div>
+		</div> */}
 
-		<div className="w-full flex items-center justify-start relative" data-aos='fade-up' data-aos-mirror='true'>
+		{/* <div className="w-full flex items-center justify-start relative" data-aos='fade-up' data-aos-mirror='true'>
 			<div className="w-auto md:w-3/12"></div>
 			<div className="w-full md:w-8/12 bg-gray-100 py-12 relative flex">
 				<a href="#" className="block relative z-10 bg-white h-full w-full px-12 md:px-0 md:w-6/12 py-24 md:-ml-24">
@@ -167,12 +167,12 @@ const Fullbody = () => {
 				</a>
 				<img src="https://source.unsplash.com/1600x900/?code" className="absolute top-0 left-0 block w-full h-full object-cover" />
 			</div>
-		<div className="w-1/12 absolute top-0 right-0 h-full bg-black"></div>
+		<div className="w-1/12 absolute top-0 right-0 h-full bg-black"></div> */}
 
 		
 
 		
-	</div>
+	{/* </div> */}
 
 
 	
