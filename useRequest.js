@@ -1,7 +1,20 @@
+import useSWR from 'swr'
 import useSWRInfinite from "swr/infinite"
 
 const fetcher = url => fetch(url).then(res => res.json())
 const baseUrl = "https://ronan-oleary.com/wp-json/wp/v2";
+
+
+export const useGetPosts = (path) => {
+  if (!path) {
+    throw new Error("Path is required");
+  }
+
+  const url = baseUrl + path;
+  const { data: posts, error } = useSWR(url, fetcher, {revalidateAll: true });
+
+  return { posts, error }; 
+};
 
 export const usePaginatePosts = path => {
   if (!path) {
@@ -18,7 +31,7 @@ export const usePaginatePosts = path => {
 
   const { data, error, size, setSize } = useSWRInfinite(
     index => `${url}?page=${index + 1}&per_page=${PAGE_LIMIT}`,
-    fetcher
+    fetcher, { revalidateAll: true }
   )
   
   const posts = data ? [].concat(...data) : []
