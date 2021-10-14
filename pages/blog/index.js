@@ -1,11 +1,11 @@
 import { usePaginatePosts } from "../../useRequest"
 import Layout from '../../components/layout'
 import Post from "../../components/post";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Blog() {
   const [pageIndex, setPageIndex] = useState(0)
-  const [loading, setLoading] = useState(false)
+  
   const {
     posts,
     error,
@@ -15,11 +15,16 @@ export default function Blog() {
     isReachingEnd,
   } = usePaginatePosts("/posts")
 
+  useEffect(() => {
+    console.log(posts);
+  },[]);
+
   if (error) return <h1>Something went wrong!</h1>
-  if (!posts) return <h1>Loading...</h1>
+  if (!posts) return <h1>LOADING POSTS...</h1>
 
   return (
       <Layout>
+
         <div className="container mx-auto md:px-12">
             <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-24 bg-white">
@@ -43,6 +48,8 @@ export default function Blog() {
                                     : "LOAD MORE"}
                                 </button>           
                             </ul>
+                            <button onClick={() => setPageIndex(pageIndex - 1)}>Previous</button>
+                            <button onClick={() => setPageIndex(pageIndex + 1)}>Next</button>
                         </div>
                     </div>
             </article>

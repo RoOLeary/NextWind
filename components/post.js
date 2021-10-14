@@ -8,7 +8,7 @@ export default function Post({ post }) {
           <Link href={`/blog/${slug}`}>
             <a>
                 <h1 className="Card--title">
-                    <strong> {title.rendered}</strong>
+                    <strong>{title.rendered}</strong>
                 </h1>
                 <p dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />
             </a>
