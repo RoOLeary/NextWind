@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { useEffect } from 'react'; 
 import Layout from '../../components/layout'
 
 const Post = ({ post }) => {
@@ -9,11 +9,11 @@ const Post = ({ post }) => {
                 <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-24 bg-white">
                         <h1 className="text-2xl md:text-5xl font-black text-gray-800 tracking-widest leading-tight mb-4 hover:opacity-50">
-                          {post[0].title.rendered}
+                          {post ? post[0].title.rendered : ''}
                         </h1>
                         <small><strong>By Ro</strong></small>
                         <img src="//placedog.net/1200/350" className="mx-auto mt-4" />
-						<div className="max-w-m font-serif leading-loose tracking-wide text-lg text-black mt-6 mb-12 format-content" dangerouslySetInnerHTML={{ __html : post[0].content.rendered }} />
+						<div className="max-w-m font-serif leading-loose tracking-wide text-lg text-black mt-6 mb-12 format-content" dangerouslySetInnerHTML={{ __html : post ? post[0].content.rendered: 'Loading'}} />
                     </div>
                 </article>
             </div>
@@ -44,7 +44,7 @@ const Post = ({ post }) => {
         return {
             props: { 
                post
-            }
+            },
         };
     }
 
