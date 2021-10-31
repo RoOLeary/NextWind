@@ -33,7 +33,7 @@ const Post = ({ post }) => {
             params: { slug: post.slug.toString() },
         }));
         // And we'll pre-render only these paths at build time.
-        return { paths, fallback: 'blocking' };
+        return { paths, fallback: false };
     }
 
     // This also gets called at build time
@@ -45,7 +45,7 @@ const Post = ({ post }) => {
             props: { 
                post
             },
-            revalidate: 60,
+            revalidate: 1,
         };
     }
 
