@@ -49,7 +49,7 @@ export default function Blog(){
                                   {isLoadingMore
                                       ? 'Loading...'
                                       : isReachingEnd
-                                          ? 'That\'s all for now!'
+                                          ? 'No More Posts'
                                           : 'Load More'}
                               </button>
                             </div>
