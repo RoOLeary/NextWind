@@ -42,7 +42,7 @@ const Post = ({ post }) => {
             props: { 
                post
             },
-            revalidate: 10,
+            revalidate: 60,
         };
     }
 
