@@ -6,7 +6,7 @@ export default function Post({ post }) {
     
     return (
       <li className="Card">
-          <Link href={`/blog/${slug}`} as={`/blog/${slug}`} prefetch>
+          <Link href={`/blog/${slug}`} as={`/blog/${slug}`}>
             <a>
                 <h1 className="Card--title">
                     <strong>{title.rendered}</strong>

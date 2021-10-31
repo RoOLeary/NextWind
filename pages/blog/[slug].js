@@ -6,9 +6,9 @@ const Post = ({ post }) => {
     const router = useRouter()
 
     if(router.isFallback) {
-       return <h1>Loading...</h1>
+       console.log('Loading...')
     }
-
+    
     return(
         <Layout>
             <div className="container mx-auto md:px-12">
@@ -29,19 +29,6 @@ const Post = ({ post }) => {
     }
       
 
-    // This function gets called at build time
-    export async function getStaticPaths() {
-    
-        const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts`)
-        const posts = await res.json();
-        // Get the paths we want to pre-render based on posts
-        const paths = posts.map((post) => ({
-            params: { slug: post.slug.toString() },
-        }));
-        // And we'll pre-render only these paths at build time.
-        return { paths, fallback: false };
-    }
-
     // This also gets called at build time
     export async function getStaticProps({ params }) {
         const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts?slug=${params.slug}`);
@@ -51,10 +38,22 @@ const Post = ({ post }) => {
             props: { 
                post
             },
-            revalidate: 1,
+            revalidate: 10,
         };
     }
 
+    // This function gets called at build time
+    export async function getStaticPaths() {
+
+    const res = await fetch(`https://ronan-oleary.com/wp-json/wp/v2/posts`)
+    const posts = await res.json();
+    // Get the paths we want to pre-render based on posts
+    const paths = posts.map((post) => ({
+        params: { slug: post.slug.toString() },
+    }));
+    // And we'll pre-render only these paths at build time.
+    return { paths, fallback: false }
+}
       
 export default Post;
 
