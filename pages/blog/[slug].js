@@ -4,6 +4,8 @@ import Layout from '../../components/layout'
 const Post = ({ post }) => {
 
 
+    console.log(post[0].slug);
+
     
 
 
@@ -38,7 +40,7 @@ const Post = ({ post }) => {
             params: { slug: post.slug.toString() },
         }));
         // And we'll pre-render only these paths at build time.
-        return { paths, fallback: false };
+        return { paths, fallback: true };
     }
 
     // This also gets called at build time
@@ -49,7 +51,7 @@ const Post = ({ post }) => {
         return {
             props: { 
                post
-            },
+            }
         };
     }
 
