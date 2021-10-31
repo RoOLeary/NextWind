@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'; 
 import Layout from '../../components/layout'
 import {useRouter} from 'next/router'
+import Link from 'next/link'
 
 const Post = ({ post }) => {
     const router = useRouter()
@@ -20,6 +21,9 @@ const Post = ({ post }) => {
                         <small><strong>By Ro</strong></small>
                         <img src="//placedog.net/1200/350" className="mx-auto mt-4" />
 						<div className="max-w-m font-serif leading-loose tracking-wide text-lg text-black mt-6 mb-12 format-content" dangerouslySetInnerHTML={{ __html : post ? post[0].content.rendered: 'Loading'}} />
+                        <br />
+                        <Link href="/blog">Back to blog</Link>
+                        
                     </div>
                 </article>
             </div>
