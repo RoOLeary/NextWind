@@ -1,14 +1,7 @@
-import React, { useEffect } from 'react'; 
+import React from 'react'; 
 import Layout from '../../components/layout'
 
 const Post = ({ post }) => {
-
-
-    console.log(post[0].slug);
-
-    
-
-
 
     return(
         <Layout>
