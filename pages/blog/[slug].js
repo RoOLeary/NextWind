@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react'; 
 import Layout from '../../components/layout'
+import {useRouter} from 'next/router'
 
 const Post = ({ post }) => {
+    const router = useRouter()
+
+    if(router.isFallback) {
+       return <h1>Loading...</h1>
+    }
 
     return(
         <Layout>
