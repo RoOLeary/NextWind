@@ -52,7 +52,7 @@ const Post = ({ post }) => {
         params: { slug: post.slug.toString() },
     }));
     // And we'll pre-render only these paths at build time.
-    return { paths, fallback: false }
+    return { paths, fallback: true }
 }
       
 export default Post;
