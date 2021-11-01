@@ -1,4 +1,6 @@
 next.config.js
 module.exports = {
-  basePath: '/app'
+  basePath: '/app',
+  trailingSlash: true
 }
+

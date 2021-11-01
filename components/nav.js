@@ -28,6 +28,7 @@ const Nav = () => {
             <span onClick={() => toggleMenu()} className="absolute top-0 right-0 block w-24 h-24 flex items-center justify-center text-white font-black text-white text-l mr-8 mt-0 cursor-pointer">close</span>
             <ul className="flex flex-col text-center text-white font-black text-2xl md:text-4xl leading-loose tracking-wider">
                 <li><Link href="/"><a className="block hover:opacity-50">Home</a></Link></li>
+                <li><Link href="/about"><a className="block hover:opacity-50">About</a></Link></li>
                 <li><Link href="/work"><a className="block hover:opacity-50">Work</a></Link></li>
                 <li><Link href="/contact"><a className="block hover:opacity-50">Contact</a></Link></li>
                 <li><Link href="/blog"><a className="block hover:opacity-50">Blog</a></Link></li>
