@@ -70,7 +70,7 @@ export const Form = () => {
             />
             </div>
             <div className="text-left mt-6">
-                <input className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" />
+                <input className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" type="submit" />
             </div>
         </form>
     
