@@ -21,12 +21,8 @@ const Work = () => {
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an puss and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
-<<<<<<< HEAD
             "link": 'https://ronan-oleary.com'
         },
-=======
-        }, 
->>>>>>> 27845e93f1f237b0403084aa7ebdcc1d57ce5076
         {
             "title": 'Web Summit',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
