@@ -330,3 +330,9 @@
 	right: 35px;
 	}
   }
+
+  .hover,
+  .active{
+	  text-decoration: underline;
+	  text-underline-position: under
+  }
