@@ -74,7 +74,7 @@ const Work = () => {
 
     return(
         <Layout>
-            <div className="container mx-auto md:px-12">
+            <div className="container mx-auto md:px-2">
                 <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-12 bg-white">
                         <h1 className="text-2xl md:text-5xl font-black text-gray-800 tracking-widest leading-tight mb-12 hover:opacity-50">

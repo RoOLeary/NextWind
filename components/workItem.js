@@ -15,14 +15,14 @@ const WorkItem = (props) => {
 
     return(
          
-        <div className="w-full sm:w-1/2 md:w-1/3 mb-4 px-2" onClick={(e) => logCurrent(`${item}`)}>
+        <div className="w-full sm:w-full md:w-1/2 lg:w-1/3 mb-4 px-2" onClick={(e) => logCurrent(`${item}`)}>
             <div className="relative bg-white rounded border">
                 <picture className="block bg-gray-200 border-b">
-                    <img className="block" src="https://via.placeholder.com/800x600/EDF2F7/E2E8F0/&amp;text=Card" alt="Card 1" />
+                    <img className="block" src={`${item.image}`} alt={`${item.title}`} />
                 </picture>
                 <div className="p-4">
                     <h3 className="text-lg font-bold">
-                        <a className="stretched-link" href="/james-jazz/" title="Card 1">
+                        <a className="stretched-link" href="/james-jazz/" title="{item.title}">
                         {item.title}
                         </a>
                     </h3>
