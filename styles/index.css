@@ -336,3 +336,8 @@
 	  text-decoration: underline;
 	  text-underline-position: under
   }
+
+  .transition-all{
+	transition-property: all;
+	transition-duration: .5s;
+  }
