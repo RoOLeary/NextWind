@@ -14,54 +14,63 @@ const Work = () => {
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+            "link": 'https://ronan-oleary.com'
         },
         {
             "title": 'TNW Conference',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an puss and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+            "link": 'https://ronan-oleary.com'
         },
         {
             "title": 'Web Summit',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+            "link": 'https://ronan-oleary.com'
         },
         {
             "title": 'Algarve Music Series',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director and fluffer.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+            "link": 'https://ronan-oleary.com'
         },
         {
             "title": 'Isabel Vaz',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+            "link": 'https://ronan-oleary.com'
         },
         {
             "title": 'Ronan O\'Leary',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+            "link": 'https://ronan-oleary.com'
         },
         {
             "title": 'Trigger Media',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+            "link": 'https://ronan-oleary.com'
         },
         {
             "title": 'Run Republic',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+            "link": 'https://ronan-oleary.com'
         },
         {
             "title": 'Celtic Dublin',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an Assistant and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+            "link": 'https://ronan-oleary.com'
         }
     ]
 
