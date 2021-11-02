@@ -15,7 +15,7 @@ const WorkItem = (props) => {
 
     return(
          
-        <div className="w-full sm:w-1/2 md:w-1/3 mb-4 px-2" onClick={(e) => logCurrent(`${item}`)}>
+        <div className="w-full sm:w-full md:w-1/2 lg:w-1/3 mb-4 px-2" onClick={(e) => logCurrent(`${item}`)}>
             <div className="relative bg-white rounded border">
                 <picture className="block bg-gray-200 border-b">
                     <img className="block" src={`${item.image}`} alt="Card 1" />

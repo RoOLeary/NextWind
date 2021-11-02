@@ -21,8 +21,12 @@ const Work = () => {
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
             "description": 'I started there as an puss and finally got a promotion to the Marketing Director.',
             "image": 'https://source.unsplash.com/1600x900/?band,music',
+<<<<<<< HEAD
             "link": 'https://ronan-oleary.com'
         },
+=======
+        }, 
+>>>>>>> 27845e93f1f237b0403084aa7ebdcc1d57ce5076
         {
             "title": 'Web Summit',
             "excpert": "Lol, this is the excerpt where I will put some dummy text for the moment. Hurrah",
@@ -83,7 +87,7 @@ const Work = () => {
 
     return(
         <Layout>
-            <div className="container mx-auto md:px-12">
+            <div className="container mx-auto md:px-2">
                 <article className="relative z-10 w-full flex flex-wrap mb-24">
                     <div className="w-full bg-white p-12 md:p-12 bg-white">
                         <h1 className="text-2xl md:text-5xl font-black text-gray-800 tracking-widest leading-tight mb-12 hover:opacity-50">
