@@ -16,7 +16,11 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
 
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre{
+	font-family: 'Poppins', sans-serif;
+}
 
 .slider__wrapper{
 	position: relative; 
