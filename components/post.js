@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import { useEffect } from 'react'; 
 
-export default function Post({ post }) {
+const Post = ({ post }) => {
     
-    const { title, excerpt, slug, categories } = post;
-    console.log(categories);
+    const { title, excerpt, slug } = post;
+    // console.log(title);
     return (
       <li className="Card">
           <Link href={`/blog/${slug}`} as={`/blog/${slug}`}>
@@ -20,3 +19,5 @@ export default function Post({ post }) {
     );
   }
   
+
+  export default Post;
